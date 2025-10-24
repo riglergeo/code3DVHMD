@@ -1,0 +1,77 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!model 1: 1 block immersed in half-space
+!!
+Background (1D)	
+1.d12    3000.d0        ! Resistivity and thickness of the air layer.
+1				        ! Number of layers, including basement.
+500.d0  500.d0  3000.d0 ! Resistivities and thickness of each layer.
+
+Blocks (3D)
+1                    ! number of bodies.
+50.d0  0.d0 8.d0     ! Coordinates of the center of the body.
+20.d0  10.d0 10.d0   ! Block edge lengths (x,y,z).
+10.d0  10.d0         ! Resistivities in the horizontal and vertical directions.
+
+Perfil
+21                  ! Number of observation points
+1.83d0   0.d0  	    ! Coordinates (x0,y0) of the starting point of the profile (x0=0.5*coil spacing).
+101.83d0  0.d0      ! Coordinates (x,y) of the profile end point (x = length of profile + 0.5*coil spacing).
+-0.1d0		        ! Z coordinate of the profile line.
+0.d0  0.d0  -0.1d0  ! transmitter coordinates.
+1.d0		        ! Dipole moment.
+3.66d0  9800.d0     ! coil spacing and frequency
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!model 2: 2 block immersed in half-space
+!!
+Background (1D)	
+1.d12    3000.d0         ! Resistivity and thickness of the air layer.
+1				         ! Number of layers, including basement.
+300.d0  300.d0  3000.d0  ! Resistivities and thickness of each layer.
+
+
+Blocks (3D)
+2                     ! number of bodies.
+40.d0 10.d0 20.d0     ! Coordinates of the center of the body.
+20.d0 20.d0 30.d0     ! Block edge lengths (x,y,z).
+100.d0 100.d0         ! Resistivities in the horizontal and vertical directions.
+70.d0 10.d0 30.d0     ! Coordinates of the center of the second body.
+20.d0 20.d0 50.d0     ! Block edge lengths (x,y,z).
+100.d0 100.d0         ! Resistivities in the horizontal and vertical directions.
+
+Perfil
+51                       ! Number of observation points.
+5.d0 10.d0  	         ! Coordinates (x,y) of the starting point of the profile.
+105.d0 10.d0             ! Coordinates (x,y) of the profile end point.
+-0.5d0			         ! Z coordinate of the profile line.
+0.d0  10.d0  -0.5d0	     ! transmitter coordinates.
+1.d0			         ! Dipole moment.
+10.d0 6400.d0            ! coil spacing and frequency
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!  model 3: 1 block and 2 layers
+!!
+Background (1D)	
+1.d12    3000.d0         ! Resistivity and thickness of the air layer.
+2				         ! Number of layers, including basement.
+500.d0 500.d0 10.d0      ! Resistivities and thickness of each layer.
+700.d0 700.d0 2990.d0
+
+Blocks (3D)
+1
+50.d0 0.d0 20.d0          ! number of bodies.
+20.d0 20.d0 10.d0         ! Coordinates of the center of the body.
+100.d0 100.d0             ! Resistivities in the horizontal and vertical directions.
+
+Perfil
+51                        ! Number of observation points.
+25.d0 21.d0  	          ! Coordinates (x,y) of the starting point of the profile.
+125.d0 21.d0              ! Coordinates (x,y) of the profile end point.
+-0.5d0			          ! Z coordinate of the profile line.
+0.d0  0.d0  -0.5d0	      ! transmitter coordinates.
+1.d0			          ! Dipole moment.
+50.d0 222.d0              ! coil spacing and frequency
+
+
